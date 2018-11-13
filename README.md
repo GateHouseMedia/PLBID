@@ -28,7 +28,9 @@ Since we didn't have statistical software, we relied on the record layout in the
 
 We noted all the field names and character positions for each year in an Excel spreadsheet called **PLBID Fields 2006-2016.xlsx**, which is in our repository. The names and character positions are the same in the Birth Data files, but they don't include the fields related to the infant's death, obviously.
 
-We then used a Python script to combine the data across all the years into one big data set with the appropriate fields for us to query. 
+We then used a Python script to format the flatfiles into CSV files with the appropriate column headers so we can import it into Google BigQuery. 
+
+Quick note on this: If you want a smaller data set (in other words, if you know you're gonig to call only a handful of fields for your analysis), you can edit down the **PLBID Fields 2006-2016.xlsx** spreadsheet before you run the Python script on it. 
 
 ### Prerequisites
 Python ( 2.7 or greater ).  
