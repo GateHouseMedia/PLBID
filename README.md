@@ -418,3 +418,391 @@ AND LBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 AND CAST(AGER5 AS INTEGER) <4
 ```
+
+#### Neonatal mortality (infant death within 0-27 days of birth)
+
+Infants delivered by hospital physicians
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND (ATTEND = "1" OR ATTEND = "2")
+```
+
+Deaths of infants delivered by hospital physicians
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.NUM]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND (ATTEND = "1" OR ATTEND = "2")
+AND AGER5 != "5"
+```
+
+Infants delivered by hospital midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND (ATTEND = "3" OR ATTEND = "4")
+```
+
+Deaths of infants delivered by hospital midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.NUM]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND (ATTEND = "3" OR ATTEND = "4")
+AND AGER5 != "5"
+```
+
+Infants delivered by freestanding birth center midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "2" OR BFACIL = "2")
+AND (ATTEND = "3" OR ATTEND = "4")
+```
+
+Deaths of infants delivered by freestanding birth center midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.NUM]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "2" OR BFACIL = "2")
+AND (ATTEND = "3" OR ATTEND = "4")
+AND AGER5 != "5"
+```
+
+Infants delivered by home midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "4" OR BFACIL = "3" OR BFACIL = "4" OR BFACIL = "4")
+AND (ATTEND = "3" OR ATTEND = "4")
+```
+
+Deaths of fnfants delivered by home midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.NUM]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "4" OR BFACIL = "3" OR BFACIL = "4" OR BFACIL = "4")
+AND (ATTEND = "3" OR ATTEND = "4")
+AND AGER5 != "5"
+```
+
+#### Neonatal mortality of FIRST CHILD (infant death within 0-27 days of birth)
+
+Infants delivered by hospital physicians
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND LBO_REC = "1"
+AND (ATTEND = "1" OR ATTEND = "2")
+```
+
+Deaths of infants delivered by hospital physicians
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.NUM]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND LBO_REC = "1"
+AND (ATTEND = "1" OR ATTEND = "2")
+AND AGER5 != "5"
+```
+
+Infants delivered by hospital midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND LBO_REC = "1"
+AND (ATTEND = "3" OR ATTEND = "4")
+```
+
+Deaths of infants delivered by hospital midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.NUM]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND LBO_REC = "1"
+AND (ATTEND = "3" OR ATTEND = "4")
+AND AGER5 != "5"
+```
+
+Infants delivered by freestandingn birth center midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "2" OR BFACIL = "2")
+AND LBO_REC = "1"
+AND (ATTEND = "3" OR ATTEND = "4")
+```
+
+Deaths of infants delivered by freestandingn birth center midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.NUM]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "2" OR BFACIL = "2")
+AND LBO_REC = "1"
+AND (ATTEND = "3" OR ATTEND = "4")
+AND AGER5 != "5"
+```
+
+Infants delivered by home midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "4" OR BFACIL = "3" OR BFACIL = "4" OR BFACIL = "5")
+AND LBO_REC = "1"
+AND (ATTEND = "3" OR ATTEND = "4")
+```
+
+Deaths of infants delivered by home midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.NUM]
+WHERE BWTR4 = "3"
+AND RESTATUS != "4"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (CA_ANEN != "Y" OR UCA_ANEN != "1")
+AND (CA_MNSB != "Y" OR UCA_SPINA != "1")
+AND CA_CCHD != "Y"
+AND (CA_CDH != "Y" OR UCA_HERN != "1")
+AND (CA_OMPH != "Y" OR UCA_OMPH != "1")
+AND CA_GAST != "Y"
+AND CA_LIMB != "Y"
+AND (CA_CLEFT != "Y" OR UCA_CLIP != "1")
+AND CA_CLPAL != "Y"
+AND CA_HYPO != "Y"
+AND (CA_DISOR = "N" OR CA_DISOR = "U")
+AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
+AND (UBFACIL = "4" OR BFACIL = "3" OR BFACIL = "4" OR BFACIL = "5")
+AND LBO_REC = "1"
+AND (ATTEND = "3" OR ATTEND = "4")
+AND AGER5 != "5"
+```
