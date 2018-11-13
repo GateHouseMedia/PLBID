@@ -48,7 +48,7 @@ Example command for VS13LINK.PSNUMPUB ( found in the example folder ). Since the
 This will create a new CSV file in the same folder as the input file. 
 
 ### Load the data into Google BigQuery
-Or whatever database you prefer. But we used Google BigQuery because of the size of the files -- in particular, the Birth Data file (AKA, the numerator), which contains tens of millions of records. 
+Or whatever database you prefer. But we used Google BigQuery because of the size of the files -- in particular, the Birth Data file (AKA, the denominator), which contains tens of millions of records. 
 
 ### Query the data
 Here are the queries we used to run the analysis. Note that you will have to pull birth data from the Birth Data file (denominator) and death data from the PLBID file (numerator).
