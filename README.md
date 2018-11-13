@@ -40,7 +40,7 @@ From the command line or terminal execute the ```parseCDC.py``` Python script an
   `-i <input file name>` ( the CDC file to parse )  
   `-s <sheet name>` ( name of the Excel sheet to grab column positions from )
   
-Example command for VS13LINK.PSNUMPUB ( found in the example folder ). Since the column positions for 2013 are on the 2011-2013 sheet we will pass that to -s parameter  
+Example command for VS13LINK.PSNUMPUB ( found in the example folder ). Since the column positions for 2013 are on the 2011-13 sheet we will pass that to -s parameter  
 ```python parseCDC.py -i 'example/VS13LINK.PSNUMPUB' -s '2011-13'```
 
 This will create a new CSV file in the same folder as the input file. 
