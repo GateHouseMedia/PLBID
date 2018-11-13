@@ -28,7 +28,20 @@ Since we didn't have statistical software, we relied on the record layout in the
 
 We noted all the field names and character positions for each year in an Excel spreadsheet called **PLBID Fields 2006-2016.xlsx**, which is in our repository. The names and character positions are the same in the Birth Data files, but they don't include the fields related to the infant's death, obviously.
 
-DAK FILLS IN THE PYTHON PART HERE ...
+### Prerequisites
+Python ( 2.7 or greater ).  
+Pandas module - `pip install pandas `  
+If you are using Python 2.7 the xlrd module may also be needed - ` pip install xlrd `  
+
+### Running the script
+From the command line or terminal execute the ```parseCDC.py``` Python script and provide the required parameters.  
+  `-i <input file name>` ( the CDC file to parse )  
+  `-s <sheet name>` ( name of the Excel sheet to grab column positions from )
+  
+Example command for VS13LINK.PSNUMPUB ( found in the example folder ). Since the column positions for 2013 are on the 2011-2013 sheet we will pass that to -s parameter  
+```python parseCDC.py -i 'example/VS13LINK.PSNUMPUB' -s '2011-13'```
+
+This will create a new CSV file in the same folder as the input file. 
 
 ### Load the data into Google BigQuery
 Or whatever database you prefer. But we used Google BigQuery because of the size of the files -- in particular, the Birth Data file (AKA, the numerator). 
