@@ -8,11 +8,13 @@ Specifically, we looked at four groups:
 * babies born at home with a midwife
 * babies born in a freestanding birth center (not attached to a hospital) with a midwife
 
-We restricted our analysis to full-term infants (37+ weeks gestation, weighing at least 2,500 grams) with no congenital anomolies or chromosomal disorders. In other words, we exluded babies who might have died or had an Apgar score of 0 regardless of birth setting or birth attendant. We also excluded twins and other multiple births. And we exluded babies born to mothers who were not U.S. residents and whose prenatal care might have happened outside of the United States.
+For the neonatal mortality analysis, we restricted our analysis to full-term infants (37+ weeks gestation, weighing at least 2,500 grams) with no congenital anomolies or chromosomal disorders. In other words, we exluded babies who might have died regardless of birth setting or birth attendant. We also excluded twins and other multiple births. And we exluded babies born to mothers who were not U.S. residents and whose prenatal care might have happened outside of the United States.
+
+For the Apgar=0 analysis, we we restricted our analysis to full-term infants (37+ weeks gestation, weighing at least 2,500 grams) who were not twins or triplets, etc. But we did not exlude babies who had congenital anomolies or chromosomal disorders, nor did we exclude babies of non-U.S. resident mothers.
 
 We based our research on older studies done by [Amos Grunenbaum et al](https://www.documentcloud.org/documents/5030472-Grunenbaum-et-al-Papers.html) published in the American Journal of Obstetrics & Gynecology.
 
-You can run a simpler analysis in [CDC WONDER](https://wonder.cdc.gov/lbd.html), but it does not allow you to break down the out-of-hospital births by specific location (home birth versus birth center birth). 
+You can run a simpler analysis in the user-friendly [CDC WONDER](https://wonder.cdc.gov/lbd.html) online database, but it does not allow you to break down the out-of-hospital births by specific location (home birth versus birth center birth). It's still a nice feature, though, and I would recommend it if you want to bypass converting flatfiles.
 
 ## Getting Started
 
@@ -243,7 +245,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "1" OR BFACIL = "1")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "1" OR ATTEND = "2")
 ```
 
@@ -267,7 +269,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "1" OR BFACIL = "1")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "1" OR ATTEND = "2")
 AND CAST(AGER5 AS INTEGER) <4
 ```
@@ -292,7 +294,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "1" OR BFACIL = "1")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 ```
 
@@ -316,7 +318,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "1" OR BFACIL = "1")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 AND CAST(AGER5 AS INTEGER) <4
 ```
@@ -341,7 +343,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "2" OR BFACIL = "2")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 ```
 
@@ -365,7 +367,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "2" OR BFACIL = "2")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 AND CAST(AGER5 AS INTEGER) <4
 ```
@@ -390,7 +392,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "4" OR BFACIL = "3" OR BFACIL = "4" OR BFACIL = "5")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 ```
 
@@ -414,7 +416,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "4" OR BFACIL = "3" OR BFACIL = "4" OR BFACIL = "5")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 AND CAST(AGER5 AS INTEGER) <4
 ```
@@ -631,7 +633,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "1" OR BFACIL = "1")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "1" OR ATTEND = "2")
 ```
 
@@ -655,7 +657,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "1" OR BFACIL = "1")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "1" OR ATTEND = "2")
 AND AGER5 != "5"
 ```
@@ -680,7 +682,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "1" OR BFACIL = "1")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 ```
 
@@ -704,7 +706,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "1" OR BFACIL = "1")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 AND AGER5 != "5"
 ```
@@ -729,7 +731,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "2" OR BFACIL = "2")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 ```
 
@@ -753,7 +755,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "2" OR BFACIL = "2")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 AND AGER5 != "5"
 ```
@@ -778,7 +780,7 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "4" OR BFACIL = "3" OR BFACIL = "4" OR BFACIL = "5")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 ```
 
@@ -802,7 +804,187 @@ AND CA_HYPO != "Y"
 AND (CA_DISOR = "N" OR CA_DISOR = "U")
 AND (CA_DOWN = "U" OR CA_DOWN = "N" OR UCA_DOWN != "1")
 AND (UBFACIL = "4" OR BFACIL = "3" OR BFACIL = "4" OR BFACIL = "5")
-AND LBO_REC = "1"
+AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 AND AGER5 != "5"
+```
+
+#### Apgar Score of 0
+
+Infants delivered by hospital physicians
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND (ATTEND = "1" OR ATTEND = "2")
+```
+
+Infants delivered by hospital physicians with Apgar=0
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND (ATTEND = "1" OR ATTEND = "2")
+AND APGAR5 = “00"
+```
+
+Infants delivered by hospital midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND (ATTEND = "3" OR ATTEND = "4")
+```
+
+Infants delivered by hospital midwives with Apgar=0
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND (ATTEND = "3" OR ATTEND = "4")
+AND APGAR5 = “00"
+```
+
+Infants delivered by freestanding birth center midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (UBFACIL = "2" OR BFACIL = "2")
+AND (ATTEND = "3" OR ATTEND = "4")
+```
+
+Infants delivered by freestanding birth center midwives with Apgar=0
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (UBFACIL = "2" OR BFACIL = "2")
+AND (ATTEND = "3" OR ATTEND = "4")
+AND APGAR5 = “00"
+```
+
+Infants delivered by home midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (UBFACIL = "4" OR BFACIL = "3" OR BFACIL = "4" OR BFACIL = "5")
+AND (ATTEND = "3" OR ATTEND = "4")
+```
+
+Infants delivered by home midwives with Apgar=0
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND (UBFACIL = "4" OR BFACIL = "3" OR BFACIL = "4" OR BFACIL = "5")
+AND (ATTEND = "3" OR ATTEND = "4")
+AND APGAR5 = “00"
+```
+
+#### Apgar Score of 0 for FIRST CHILD
+
+Infants delivered by hospital physicians
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND TBO_REC = "1"
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND (ATTEND = "1" OR ATTEND = "2")
+```
+
+Infants delivered by hospital physicians with Apgar=0
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND TBO_REC = "1"
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND (ATTEND = "1" OR ATTEND = "2")
+AND APGAR5 = “00"
+```
+
+Infants delivered by hospital midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND TBO_REC = "1"
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND (ATTEND = "3" OR ATTEND = "4")
+```
+
+Infants delivered by hospital midwives with Apgar=0
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND TBO_REC = "1"
+AND (UBFACIL = "1" OR BFACIL = "1")
+AND (ATTEND = "3" OR ATTEND = "4")
+AND APGAR5 = “00"
+```
+
+Infants delivered by freestanding birth center midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND TBO_REC = "1"
+AND (UBFACIL = "2" OR BFACIL = "2")
+AND (ATTEND = "3" OR ATTEND = "4")
+```
+
+Infants delivered by freestanding birth center midwives with Apgar=0
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND TBO_REC = "1"
+AND (UBFACIL = "2" OR BFACIL = "2")
+AND (ATTEND = "3" OR ATTEND = "4")
+AND APGAR5 = “00"
+```
+
+Infants delivered by home midwives
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND TBO_REC = "1"
+AND (UBFACIL = "4" OR BFACIL = "3" OR BFACIL = "4" OR BFACIL = "5")
+AND (ATTEND = "3" OR ATTEND = "4")
+```
+
+Infants delivered by home midwives with Apgar=0
+```
+SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
+WHERE BWTR4 = "3"
+AND GESTREC3 = "2"
+AND DPLURAL = "1"
+AND TBO_REC = "1"
+AND (UBFACIL = "4" OR BFACIL = "3" OR BFACIL = "4" OR BFACIL = "5")
+AND (ATTEND = "3" OR ATTEND = "4")
+AND APGAR5 = “00"
 ```
