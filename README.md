@@ -47,7 +47,7 @@ This will create a new CSV file in the same folder as the input file.
 Or whatever database you prefer. But we used Google BigQuery because of the size of the files -- in particular, the Birth Data file (AKA, the numerator). 
 
 ### Query the data
-Here are the queries I used to run the analysis.
+Here are the queries we used to run the analysis.
 
 #### Early neonatal mortality (infant death within 0-6 days of birth)
 
