@@ -19,7 +19,7 @@ You can run a simpler analysis in the user-friendly [CDC WONDER](https://wonder.
 ## Getting Started
 
 ### Download the PLBID flatfiles
-You need to get both the CDC's [Birth Data flatfiles and Period Linked Birth-Infant Death Data flatfiles](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm) for every year beginning in 2006. 
+You need to get both the CDC's [Birth Data flatfiles and Period Linked Birth-Infant Death Data flatfiles](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm) for every year beginning in 2006. We ran our analysis in April 2018 when the 2016 data was not yet available. It's there now, if you want to grab it, too, but your numbers will be slightly different than ours.
 
 If you have statistical software like SAS/SPSS/STATA, you can download the [code files here](http://www.nber.org/data/vital-statistics-natality-data.html). 
 
@@ -51,7 +51,9 @@ This will create a new CSV file in the same folder as the input file.
 Or whatever database you prefer. But we used Google BigQuery because of the size of the files -- in particular, the Birth Data file (AKA, the denominator), which contains tens of millions of records. 
 
 ### Query the data
-Here are the queries we used to run the analysis. Note that you will have to pull birth data from the Birth Data file (denominator) and death data from the PLBID file (numerator).
+Here are the queries we used to run the analysis. Note that you will have to pull birth data from the Birth Data file (denominator) and death data from the PLBID file (numerator). 
+
+*Quick note on CDC reporting flags: The CDC recommends that you invoke reporting flags to generate accurate numbers by residence for items which are not reported by all states. However, we were told by the CDC that for our specific analysis "you do not have to (and likely should not) invoke the flags" because the queries we wrote include all the different types of record revisions across the years and the states.*
 
 #### Early neonatal mortality (infant death within 0-6 days of birth)
 
