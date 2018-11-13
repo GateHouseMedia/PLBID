@@ -8,26 +8,26 @@ def main( argv ):
     #declare variables
     colPos = []
     header = ""
-    headerKey = ""
+    headerKey = "PLBID Fields 2006-2015.xlsx"
     fname = ""
     oname = ""
     sheet = ""
+    helpP = False
     try:
-        opts, args = getopt.getopt( argv,"hi:s:k:", [ "ifile=", "sheet=", "kfile=" ] )
+        opts, args = getopt.getopt( argv,"hi:s:", [ "ifile=", "sheet=" ] )
     except getopt.GetoptError:
-        print ( 'parseCDC.py -i <inputFile> -s <sheet> -k <headerKeyFile>' )
+        print ( 'parseCDC.py -i <input file name> -s <sheet name>' )
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print ( 'parseCDC.py -i <inputFile> -s <sheet> -k <headerKeyFile>' )
+            helpP = True
+            print ( 'parseCDC.py -i <input file name> -s <sheet name>' )
         elif opt in ( "-i", "--ifile" ):
             fname = arg
             oname = arg + '.csv'
         elif opt in ( "-s", "--sheet" ):
             sheet = arg
-        elif opt in ( "-k", "--kfile" ):
-            headerKey = arg
-    if fname != "" and sheet != "" and headerKey != "":
+    if fname != "" and sheet != "":
         #use pandas to read Excel file
         xls = pd.ExcelFile( headerKey )
         sheet1 = xls.parse( sheet )
@@ -62,10 +62,11 @@ def main( argv ):
                     line = line[:-1]
                     #write line to output file
                     output.write( line + "\n" )
+        print( "Complete: Output file - " + oname )
     else:
-        print ( 'Be sure all parameters are met' )
-        print ( 'parseCDC.py -i <inputFile> -o <outputFile> -k <headerKeyFile' )
-            
+        if not helpP:
+            print( "Error: Not all parameters were given." )
+            print ( 'parseCDC.py -i <input file name> -s <sheet name>' )
 
 if __name__ == "__main__":
    main(sys.argv[1:])
