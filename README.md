@@ -53,7 +53,7 @@ Or whatever database you prefer. But we used Google BigQuery because of the size
 ### Query the data
 Here are the queries we used to run the analysis. Note that you will have to pull birth data from the Birth Data file (denominator) and death data from the PLBID file (numerator). 
 
-*Quick note on CDC reporting flags: The CDC recommends that you invoke reporting flags to generate accurate numbers by residence for items which are not reported by all states. However, we were told by the CDC that for our specific analysis "you do not have to (and likely should not) invoke the flags" because the queries we wrote include all the different types of record revisions across the years and the states.*
+*Quick note on CDC reporting flags: The CDC recommends that you invoke reporting flags to generate accurate numbers by residence for items which are not reported by all states. However, we were told by the CDC that for our specific analysis "you do not have to (and likely should not) invoke the flags" because the queries we wrote include all the different types of record revisions across the years and the states. Out of curiosity, we did few test runs with and without the flags and saw that the raw numbers change slightly, but  the overall results of the analyses don't change much.*
 
 #### Early neonatal mortality (infant death within 0-6 days of birth)
 
