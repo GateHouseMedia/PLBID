@@ -28,6 +28,8 @@ Since we didn't have statistical software, we relied on the record layout in the
 
 We noted all the field names and character positions for each year in an Excel spreadsheet called **PLBID Fields 2006-2016.xlsx**, which is in our repository. The names and character positions are the same in the Birth Data files, but they don't include the fields related to the infant's death, obviously.
 
+We then used a Python script to combine the data across all the years into one big data set with the appropriate fields for us to query. 
+
 ### Prerequisites
 Python ( 2.7 or greater ).  
 Pandas module - `pip install pandas `  
@@ -44,10 +46,10 @@ Example command for VS13LINK.PSNUMPUB ( found in the example folder ). Since the
 This will create a new CSV file in the same folder as the input file. 
 
 ### Load the data into Google BigQuery
-Or whatever database you prefer. But we used Google BigQuery because of the size of the files -- in particular, the Birth Data file (AKA, the numerator). 
+Or whatever database you prefer. But we used Google BigQuery because of the size of the files -- in particular, the Birth Data file (AKA, the numerator), which contains tens of millions of records. 
 
 ### Query the data
-Here are the queries we used to run the analysis.
+Here are the queries we used to run the analysis. Note that you will have to pull birth data from the Birth Data file (denominator) and death data from the PLBID file (numerator).
 
 #### Early neonatal mortality (infant death within 0-6 days of birth)
 
