@@ -24,7 +24,7 @@ def main( argv ):
             print ( 'parseCDC.py -i <input file name> -s <sheet name>' )
         elif opt in ( "-i", "--ifile" ):
             fname = arg
-            oname = arg + '.csv'
+            oname = arg + '.PARSED.csv'
         elif opt in ( "-s", "--sheet" ):
             sheet = arg
     if fname != "" and sheet != "":
