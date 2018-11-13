@@ -24,7 +24,7 @@ You need to get both the CDC's [Birth Data flatfiles and Period Linked Birth-Inf
 If you have statistical software like SAS/SPSS/STATA, you can download the [code files here](http://www.nber.org/data/vital-statistics-natality-data.html). 
 
 ### Convert the flatfiles into a query-able format
-Since we didn't have statistical software, we relied on the record layout in the User's Guide provided for each year to map out the fields based on character width. The record layout changes from time to time, so you have to pay attention across each year. For example: From 2006-2013, field containing the year of infant death was called **DTHYR** and located in character positions *1188-1191*. But from 2014-2015, the field changed its name to **DOD_YY** and its character positions to *1672-1675*.
+Since we didn't have statistical software, we relied on the record layout in the User's Guide provided for each year to map out the fields based on character width. The record layout changes from time to time, so you have to pay attention across each year. For example: From 2006-2013, the field containing the year of infant death was called **DTHYR** and located in character positions *1188-1191*. But from 2014-2015, the field changed its name to **DOD_YY** and its character positions to *1672-1675*.
 
 We noted all the field names and character positions for each year in an Excel spreadsheet called **PLBID Fields 2006-2016.xlsx**, which is in our repository. The names and character positions are the same in the Birth Data files, but they don't include the fields related to the infant's death, obviously.
 
