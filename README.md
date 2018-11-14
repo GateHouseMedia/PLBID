@@ -1,6 +1,6 @@
 # PLBID
 
-We used the CDC's [Natality and Period Linked Birth-Infant Death Data Files](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm) to determine whether there was a difference in neonatal mortality rates and [five-minute Apgar scores of 0](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2943160/) among babies born in the hospital and those born outside the hospital from 2006-2015.
+We used the CDC's [Period Linked Birth-Infant Death Data Files](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm) to determine whether there was a difference in neonatal mortality rates and [five-minute Apgar scores of 0](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2943160/) among babies born in the hospital and those born outside the hospital from 2006-2015.
 
 Specifically, we looked at four groups:
 * babies born in a hospital with a midwife
@@ -19,25 +19,27 @@ You can run a simpler analysis in the user-friendly [CDC WONDER](https://wonder.
 ## Getting Started
 
 ### Download the PLBID flatfiles
-You need to get both the CDC's [Birth Data flatfiles and Period Linked Birth-Infant Death Data flatfiles](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm) for every year beginning in 2006. We ran our analysis in April 2018 when the 2016 data was not yet available. It's there now, if you want to grab it, too, but your numbers will be slightly different than ours.
+You need to getthe CDC's [Period Linked Birth-Infant Death Data flatfiles](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm) for every year beginning in 2006. We ran our analysis in April and May 2018 when the 2016 data was not yet available. It's there now, if you want to grab it, too, but your numbers will be slightly different than ours. 
+
+Each year will download two files: a denominator file (all the births) and a numerator file (all the deaths linked to those births). You'll need to query both to do this analysis.
 
 If you have statistical software like SAS/SPSS/STATA, you can download the [code files here](http://www.nber.org/data/vital-statistics-natality-data.html). 
 
 ### Convert the flatfiles into a query-able format
 Since we didn't have statistical software, we relied on the record layout in the User's Guide provided for each year to map out the fields based on character width. The record layout changes from time to time, so you have to pay attention across each year. For example: From 2006-2013, the field containing the year of infant death was called **DTHYR** and located in character positions *1188-1191*. But from 2014-2015, the field changed its name to **DOD_YY** and its character positions to *1672-1675*.
 
-We noted all the field names and character positions for each year in an Excel spreadsheet called **PLBID Fields 2006-2016.xlsx**, which is in our repository. The names and character positions are the same in the Birth Data files, but they don't include the fields related to the infant's death, obviously.
+We noted all the field names and character positions for each year in an Excel spreadsheet called **PLBID Fields 2006-2016.xlsx**, which is in our repository.
 
 We then used a Python script to format the flatfiles into CSV files with the appropriate column headers so we can import it into Google BigQuery. 
 
-Quick note on this: If you want a smaller data set (in other words, if you know you're gonig to call only a handful of fields for your analysis), you can edit down the **PLBID Fields 2006-2016.xlsx** spreadsheet before you run the Python script on it. 
+Quick note on this: If you want a smaller data set (in other words, if you know you're going to call only a handful of fields for your analysis), you can edit the **PLBID Fields 2006-2016.xlsx** spreadsheet to just those fields before you run the Python script on it. 
 
-### Prerequisites
+### Prerequisites for the Python script
 Python ( 2.7 or greater ).  
 Pandas module - `pip install pandas `  
 If you are using Python 2.7 the xlrd module may also be needed - ` pip install xlrd `  
 
-### Running the script
+### Running the Python script
 From the command line or terminal execute the ```parseCDC.py``` Python script and provide the required parameters.  
   `-i <input file name>` ( the CDC file to parse )  
   `-s <sheet name>` ( name of the Excel sheet to grab column positions from )
@@ -48,10 +50,10 @@ Example command for VS13LINK.PSNUMPUB ( found in the example folder ). Since the
 This will create a new CSV file in the same folder as the input file. 
 
 ### Load the data into Google BigQuery
-Or whatever database you prefer. But we used Google BigQuery because of the size of the files -- in particular, the Birth Data file (AKA, the denominator), which contains tens of millions of records. 
+Or whatever database you prefer. But we used Google BigQuery because of the size of the files -- in particular, the denominator files, which contains tens of millions of records. 
 
 ### Query the data
-Here are the queries we used to run the analysis. Note that you will have to pull birth data from the Birth Data file (denominator) and death data from the PLBID file (numerator). 
+Here are the queries we used to run the analysis. 
 
 *Quick note on CDC reporting flags: The CDC recommends that you invoke reporting flags to generate accurate numbers by residence for items which are not reported by all states. However, we were told by the CDC that for our specific analysis "you do not have to (and likely should not) invoke the flags" because the queries we wrote include all the different types of record revisions across the years and the states. Out of curiosity, we did few test runs with and without the flags and saw that the raw numbers change slightly, but  the overall results of the analyses don't change much.*
 
