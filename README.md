@@ -12,7 +12,7 @@ For the neonatal mortality analysis, we restricted our analysis to full-term inf
 
 For the Apgar=0 analysis, we we restricted our analysis to full-term infants (37+ weeks gestation, weighing at least 2,500 grams) who were not twins or triplets, etc. But we did not exlude babies who had congenital anomolies or chromosomal disorders, nor did we exclude babies of non-U.S. resident mothers.
 
-We based our research on older studies done by [Amos Grunenbaum et al](https://www.documentcloud.org/documents/5030472-Grunenbaum-et-al-Papers.html) published in the American Journal of Obstetrics & Gynecology.
+We based our research on older studies done by [Amos Grunebaum et al](https://www.documentcloud.org/documents/5030472-Grunenbaum-et-al-Papers.html) published in the American Journal of Obstetrics & Gynecology.
 
 You can run a simpler analysis in the user-friendly [CDC WONDER](https://wonder.cdc.gov/lbd.html) online database, but it does not allow you to break down the out-of-hospital births by specific location (home birth versus birth center birth). It's still a nice feature, though, and I would recommend it if you want to bypass converting flatfiles.
 
