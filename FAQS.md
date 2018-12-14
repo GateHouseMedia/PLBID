@@ -35,7 +35,7 @@ There is also a question on all birth certificates that, in the case of a home b
 
 "Home midwife (2)" = home births attended by a midwife where the "planned" box was checked.
 
-![cdc data analysis review](https://user-images.githubusercontent.com/13999863/50015886-b237a000-ff95-11e8-9132-424f445bd0b8.JPG)
+![cdc data analysis review](https://user-images.githubusercontent.com/13999863/50016954-aac5c600-ff98-11e8-8a95-81269a39f4c7.JPG)
 
 
 
