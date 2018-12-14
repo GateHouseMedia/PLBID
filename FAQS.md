@@ -20,17 +20,15 @@ We based our data analysis on previous, peer-reviewed published studies by Amos 
 Don't all states collect different information on their birth certificates? Doesn't that make it tricky to analyze the data?
 
 ### Answer
-Birth certificates from all 50 states and the District of Columbia track births by attendant (such as physician, certified nurse midwife or other type of midwife) and setting (such as hospital, freestanding birth center or home). In addition, all birth certificates ask whether a home birth was planned or unplanned, allowing for further refinement of the data. 
+Birth certificates from all 50 states and the District of Columbia track births by attendant (such as physician, certified nurse midwife or other type of midwife) and setting (such as hospital, freestanding birth center or home).
 
 ### Question
-So your data analysis looked only as home births in which the "planned" box was checked and excluded all others?
+Some home births are not intentional, though. How did you distinguish between planned home births and unplanned home births? 
 
 ### Answer
-Following Grunebaum’s methodology, we analyzed only home births in which the attendant was a midwife, indicating that it was planned and attended by a professional. (All home births in which the attendant was not a midwife were excluded because of the potential they were unintended home births.) 
+Following Grunebaum’s methodology, we analyzed only home births in which the attendant was a midwife, indicating that it was planned. (All home births in which the attendant was not a midwife were excluded because of the potential they were unintended home births.) It is possible that someone intended to have a hospital birth, but the baby came too quickly, and the family was able to call a midwife to rush to the house to assist. These cases would be included in our analysis, although we believe they are rare.
 
-We then went beyond that to analyze the numbers a second time including only home births in which the “planned” box was actually checked.  Although this question first appeared in the CDC’s 2003 Revision of the U.S. Certificate of Live Birth, states did not universally adopt those revisions until 2015. Because our analysis examined births between 2006 and 2015, this data point isn’t perfectly reliable. Nevertheless, when we invoked it, we found that although the raw number of births and deaths varied slightly, the findings were identical in every scenario.
-
-Home births with a midwife resulted in three times as many infant deaths during or within a month of delivery than a hospital birth with a midwife, according to both analyses. For babies of first-time moms, that rate was four times as high, according to both analyses. When restricting that analysis to one week, the rate was six times higher, according to both analyses. And for babies of first time-moms, it was eight times higher, according to both analyses. 
+There is also a question on all birth certificates that, in the case of a home birth, asks whether it was planned or unplanned. Although this question first appeared in the CDC’s 2003 Revision of the U.S. Certificate of Live Birth, states did not universally adopt those revisions until 2015. Because our analysis examined births between 2006 and 2015, this data point isn’t perfectly reliable. Nevertheless, when we invoked it, we found that although the raw number of births and deaths varied slightly, the findings were identical in every scenario.
 
 #### Here is a screen shot showing the results of the two analyses.
 "Home midwife (1)" = all home births attended by a midwife
