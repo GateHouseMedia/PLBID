@@ -48,9 +48,9 @@ Again, following Grunebaum's methodology, we did not separate the two types of m
 However, we did perform a second analysis comparing out-of-hospital delivery outcomes only beween the two different types of midwives. For this analysis, we used the PLBID via the CDC WONDER portal and looked at all out-of-hospital deliveries between 2007-2016 of full-term (37+ week) babies weighing at least 2,500 grams who were singletons (not twins or multiples), had no congenital or chromosomal anomalies and who died within 27 days of birth. 
 
 #### Results of that analysis:
-Certified Nurse Midwives: 131,867 births | 67 deaths | 5.1 deaths/10K births
+**Certified Nurse Midwives:** 131,867 births | 67 deaths | **5.1 deaths/10K births**
 
-Other (non-nurse) Midwives: 176,819 births | 158 deaths | 8.9 deaths/10K births
+**Other (non-nurse) Midwives:** 176,819 births | 158 deaths | **8.9 deaths/10K births**
 
 It's also important here to note that while the number of certified nurse midwives far exceeds that of non-nurse midwives in the United States, it is non-nurse midwives who attend the majority of out-of-hospital births (nearly 60 percent). Ninety-five percent of all CNM-attended births occur in a hospital, CDC data show.
 
