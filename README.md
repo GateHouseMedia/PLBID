@@ -16,7 +16,7 @@ We based our research on older studies done by [Amos Grunebaum et al](https://ww
 
 You can run a simpler analysis in the user-friendly [CDC WONDER](https://wonder.cdc.gov/lbd.html) online database, but it does not allow you to break down the out-of-hospital births by specific location (home birth versus birth center birth). It's still a nice feature, though, and I would recommend it if you want to bypass converting flatfiles.
 
-*NOTE (Added 12/4/2018): For more information about methodology and answers to some common questions about using CDC data for this analysis, please read the [FAQS document](PLBID/FAQS.md).
+*NOTE (Added 12/4/2018): For more information about methodology and answers to some common questions about using CDC data for this analysis, please read the [FAQS document](PLBID/FAQS.md).*
 
 ## Getting Started
 
