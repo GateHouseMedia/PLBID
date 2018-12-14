@@ -20,7 +20,7 @@ We based our data analysis on previous, peer-reviewed published studies by Amos 
 Don't all states collect different information on their birth certificates? Doesn't that make it tricky to analyze the data?
 
 ### Answer
-Birth certificates from all 50 states and the District of Columbia track births by attendant (such as physician, certified nurse midwife or other type of midwife) and setting (such as hospital, freestanding birth center or home). These are the two main criteria we used to distinguish the differnt types of in-hospital and out-of-hospital births. Specifically, we divided our analysis into: hospital births attended by physicians; hospital births attended by midwives; home births attended by midwives; freestanding birth center births attended by midwives.
+Birth certificates from all 50 states and the District of Columbia track births by attendant (such as physician, certified nurse midwife or other type of midwife) and setting (such as hospital, freestanding birth center or home). These are the two main criteria we used to distinguish the different types of in-hospital and out-of-hospital births. Specifically, we divided our analysis into: hospital births attended by physicians; hospital births attended by midwives; home births attended by midwives; freestanding birth center births attended by midwives.
 
 We further refined our analysis by including only infants who were carried full term (37+ weeks gestation), weighing at least 2,500 grams (5.8 pounds), who were singletons (not twins or multiples), had no congenital or chromosomal anomalies (which heightened the risk they would have died anyway), and born to U.S. mothers. This is the same criteria Grunebaum used.
 
