@@ -6,7 +6,7 @@ We would like to answer some common questions about the use of CDC Period Linked
 What is Period Linked Birth-Infant Death Data?
 
 ### Answer
-The linked Birth/Infant Death data set links information from the birth certificate to information from the death certificate for each infant death in the United States. The purpose of the linkage is to provide a data set that adds the many additional variables from the birth certificate to the death certificate record to enable more detailed analyses of infant mortality patterns. *(Source: Centers for Disease Control and Prevention, National Center for Health Statistics (CDC/NCHS))*
+The linked Birth/Infant Death data set links information from the birth certificate to information from the death certificate for each infant death in the United States. The purpose of the linkage is to provide a data set that adds the many additional variables from the birth certificate to the death certificate record to enable more detailed analyses of infant mortality patterns. The linked file is used for calculating infant mortality rates by race and ethnicity, which are more accurately measured from birth certificate data than from data on the death certificate. *(Source: Centers for Disease Control and Prevention, National Center for Health Statistics (CDC/NCHS))*
 
 ### Question
 Is this a reliable data set to use for this type of analysis?
@@ -49,6 +49,7 @@ However, we did perform a second analysis comparing out-of-hospital delivery out
 
 #### Results of that analysis:
 Certified Nurse Midwives: 131,867 births | 67 deaths | 5.1 deaths/10K births
+
 Other (non-nurse) Midwives: 176,819 births | 158 deaths | 8.9 deaths/10K births
 
 It's also important here to note that while the number of certified nurse midwives far exceeds that of non-nurse midwives in the United States, it is non-nurse midwives who attend the majority of out-of-hospital births (nearly 60 percent). Ninety-five percent of all CNM-attended births occur in a hospital, CDC data show.
