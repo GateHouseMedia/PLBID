@@ -6,7 +6,7 @@ We would like to answer some common questions about the use of CDC Period Linked
 What is Period Linked Birth-Infant Death Data?
 
 ### Answer
-The linked Birth/Infant Death data set links information from the birth certificate to information from the death certificate for each infant death in the United States. The purpose of the linkage is to provide a data set that adds the many additional variables from the birth certificate to the death certificate record to enable more detailed analyses of infant mortality patterns. The linked file is used for calculating infant mortality rates by race and ethnicity, which are more accurately measured from birth certificate data than from data on the death certificate. *(Source: Centers for Disease Control and Prevention, National Center for Health Statistics (CDC/NCHS))*
+The linked Birth/Infant Death data set links information from the birth certificate to information from the death certificate for each infant death in the United States. The purpose of the linkage is to provide a data set that adds the many additional variables from the birth certificate to the death certificate record to enable more detailed analyses of infant mortality patterns. *(Source: Centers for Disease Control and Prevention, National Center for Health Statistics (CDC/NCHS))*
 
 ### Question
 Is this a reliable data set to use for this type of analysis?
