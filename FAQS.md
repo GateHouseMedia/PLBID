@@ -32,7 +32,7 @@ We then went beyond that to analyze the numbers a second time including only hom
 
 Home births with a midwife resulted in three times as many infant deaths during or within a month of delivery than a hospital birth with a midwife, according to both analyses. For babies of first-time moms, that rate was four times as high, according to both analyses. When restricting that analysis to one week, the rate was six times higher, according to both analyses. And for babies of first time-moms, it was eight times higher, according to both analyses. 
 
-Here is a screen shot showing the results of the two analyses. 
+#### Here is a screen shot showing the results of the two analyses.
 "Home midwife (1)" = all home births attended by a midwife
 "Home midwife (2)" = home births attended by a midwife where the "planned" box was checked.
 
