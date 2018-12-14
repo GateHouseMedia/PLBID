@@ -8,9 +8,9 @@ Specifically, we looked at four groups:
 * babies born at home with a midwife
 * babies born in a freestanding birth center (not attached to a hospital) with a midwife
 
-For the neonatal mortality analysis, we restricted our analysis to full-term infants (37+ weeks gestation, weighing at least 2,500 grams) with no congenital anomolies or chromosomal disorders. In other words, we exluded babies who might have died regardless of birth setting or birth attendant. We also excluded twins and other multiple births. And we exluded babies born to mothers who were not U.S. residents and whose prenatal care might have happened outside of the United States.
+For the neonatal mortality analysis, we restricted our analysis to full-term infants (37+ weeks gestation, weighing at least 2,500 grams) with no congenital anomalies or chromosomal disorders. In other words, we excluded babies who might have died regardless of birth setting or birth attendant. We also excluded twins and other multiple births. And we excluded babies born to mothers who were not U.S. residents and whose prenatal care might have happened outside of the United States.
 
-For the Apgar=0 analysis, we we restricted our analysis to full-term infants (37+ weeks gestation, weighing at least 2,500 grams) who were not twins or triplets, etc. But we did not exlude babies who had congenital anomolies or chromosomal disorders, nor did we exclude babies of non-U.S. resident mothers.
+For the Apgar=0 analysis, we we restricted our analysis to full-term infants (37+ weeks gestation, weighing at least 2,500 grams) who were not twins or triplets, etc. But we did not exclude babies who had congenital anomalies or chromosomal disorders, nor did we exclude babies of non-U.S. resident mothers.
 
 We based our research on older studies done by [Amos Grunebaum et al](https://www.documentcloud.org/documents/5030472-Grunenbaum-et-al-Papers.html) published in the American Journal of Obstetrics & Gynecology.
 
@@ -417,7 +417,7 @@ AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 ```
 
-Infants delivered by home midwives
+Deaths of infants delivered by home midwives
 ```
 SELECT COUNT (*) FROM [iteam-156720:BID.NUM]
 WHERE BWTR4 = "3"
@@ -732,7 +732,7 @@ AND (ATTEND = "3" OR ATTEND = "4")
 AND AGER5 != "5"
 ```
 
-Infants delivered by freestandingn birth center midwives
+Infants delivered by freestanding birth center midwives
 ```
 SELECT COUNT (*) FROM [iteam-156720:BID.DEN]
 WHERE BWTR4 = "3"
@@ -756,7 +756,7 @@ AND TBO_REC = "1"
 AND (ATTEND = "3" OR ATTEND = "4")
 ```
 
-Deaths of infants delivered by freestandingn birth center midwives
+Deaths of infants delivered by freestanding birth center midwives
 ```
 SELECT COUNT (*) FROM [iteam-156720:BID.NUM]
 WHERE BWTR4 = "3"
